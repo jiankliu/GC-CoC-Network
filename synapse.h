@@ -1331,15 +1331,7 @@ void GCIAF::calc(double x, double *y, double *f)
 	//f[0] = ( -G_l*(y[0]-E_l) - Inoise ) / Cm; 
 #endif
 
-	//from Nieus, Thierry, Elisabetta Sola, Jonathan Mapelli, Elena
-//Saftenku, Paola Rossi, and Egidio D¡¯Angelo. LTP regulates burst
-//initiation and frequency at mossy fiber¨C granule cell synapses of rat
-//cerebellum: experimental observations and theoretical predictions. J
-//Neurophysiol 95: 686¨C699, 2006. First published October 5, 2005;
-//doi:10.1152/jn.00696.2005
-	//postB = 1/(1+exp(-(y[0] - (-20))/13));
-
-	// from Stephane's data
+	// from data
     postB = (exp((y[0]+119.51)/38.427) + exp(-(y[0]+45.895)/28.357))
 		/ (exp((y[0]+119.51)/38.427) + exp(-(y[0]+45.895)/28.357) + exp(-(y[0]-84.784)/38.427));
 
