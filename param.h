@@ -35,17 +35,17 @@
 #define V_CLAMP 0
 #define NOUBC  0
 #define HOLD   0
-#define GABAA  0       // 1: only GABAA from GoC->GC
+#define GABAA  0     
 
 const int NSTIM = 1;
 const int NTRIAL =10;
 const int ST = 0;         // time without stimuli
 const int NT = 1;
-const double T = 1000;  // [5000 2500 1667 1250 1000 833 714 625 555 500] (ms) period of stimulus 
+const double T = 1000;  //  (ms) period of stimulus 
 const double SHORTTIME = T;
 const double TMAX =  NTRIAL * SHORTTIME + ST*T;       //simulation time (m sec)
 
-const int SEED = 2947;  // [43 433 2947] randome seed 
+const int SEED = 2947;  // randome seed 
 const int RANDIN = 1;
 
 const double OFFUBC = 0.;
@@ -70,19 +70,19 @@ const double TSTIM  = 100;  //
 const double EL = 70;  // 
 
 const int STIMON = 1;  // 1: apply stimuli; 0: no external stim
-const double MFRATE = 1000/TSTIM;     // spontanous firing rate
+const double MFRATE = 1000/TSTIM;     // default firing rate
 const double A = 10;      // ( o/s) amplitude of stimulus velocity
 
 const double GCRATE  = 5;     // average GC firing rate
-const double ALPHA = 0.0;                 // time constant of controling
+const double ALPHA = 0.0;     // time constant of controlling
 
 //------------------------------------------------------------------------------
 //  network simulation parameter
 //------------------------------------------------------------------------------
-const int NMF = 500;// 200;// 500; //56;
-const int NGC = 2000;// 4900; //900;
-const int NUBC = 4; //100;
-const int NGoC = 144;//144; //144;
+const int NMF = 500;
+const int NGC = 2000;
+const int NUBC = 4; 
+const int NGoC = 144;
 
 const double stimp = 10;
 const int NINPUT = (int)ceil(NGoC * stimp/100);
