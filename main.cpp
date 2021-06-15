@@ -1,11 +1,6 @@
 
 /* 
- This is the model to simulate the network with GC and GoC.
- The network is in 2D space.
- 01/06/2010
-  
- const double ALPHA = 0.01;  this should be zero
- 20/01/2012
+ This is the model to simulate a neural network with GC and GoC.
  */
 
 #include <omp.h>
@@ -929,7 +924,7 @@ int main(int argc,char **argv)
 
 				   //add burst in Poisson Burst 1:3ms;3:8ms;7:20ms;10;28ms
 				   //20-100;1-30. 28-130.10 spike
-				   //20-20-1£»20-30-3£»20-70-7
+				   //20-20-1Â£Â»20-30-3Â£Â»20-70-7
 				   /* if (t >=1000 && t <= (1000+51)) {
 							for (i = 0; i < NMF; i++) {
 								eMF[i].Startburst = 1;
