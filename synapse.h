@@ -113,7 +113,7 @@ void Gaba_A2::calc(double lastspike, double x) {
 
 
 
-//---- first order kinet model for GABA-B synapse with the short term plasticity (STP)---------
+//---- first order model for GABA-B synapse with the short term plasticity (STP)---------
 class Gaba_B2 {
 	static double Cdur, Cmax, Deadtime;  
 	double alpha, lastrelease, releaseat, TimeCount;
@@ -194,7 +194,7 @@ void Gaba_B2::calc(double lastspike, double x) {
 //--- end gaba_a stp --
 
 
-//------------first order kiner model for slow AMPA synapse---------------------
+//------------first model for slow AMPA synapse---------------------
 class AMPAsl {
 	static double Cdur, Cmax, Deadtime; 
 	double alpha, C, S_nmda;
@@ -280,7 +280,7 @@ void AMPAsl::calc(double lastspike, double x) {
 	S_nmda += -DT * S_nmda/tauR;
 }
 
-//------------first order kiner model for AMPA and NMDA synapse---------------------
+//------------first order model for AMPA and NMDA synapse---------------------
 class AMPA_NMDA2 {
 	static double Cdur, Cmax, Deadtime; 
 	double Alpha1, Alpha2, C, S_ampa, S_nmda;
@@ -389,7 +389,7 @@ void AMPA_NMDA2::calc(double lastspike, double x) {
 	S_nmda += -DT * S_nmda/tauR2;
 }
 
-//------------UBC type: first order kiner model for mGluR2 Inh synapse---------------------
+//------------UBC type: first order model for mGluR2 Inh synapse---------------------
 class MGR2 {
 	static double Cdur, Cmax, Deadtime; 
 	double alpha, C, lastrelease, releaseat, TimeCount;
@@ -468,7 +468,7 @@ void MGR2::calc(double lastspike, double x) {
 	xx += -DT * xx/tauR;
 }
 
-//------------UBC type: first order kiner model for mGluR2 Inh synapse---------------------
+//------------UBC type: first order model for mGluR2 Inh synapse---------------------
 class MGR1 {
 	static double Cdur, Cmax, Deadtime; 
 	double C, lastrelease, releaseat, TimeCount;
@@ -1332,10 +1332,10 @@ void GCIAF::calc(double x, double *y, double *f)
 #endif
 
 	//from Nieus, Thierry, Elisabetta Sola, Jonathan Mapelli, Elena
-//Saftenku, Paola Rossi, and Egidio D¡¯Angelo. LTP regulates burst
-//initiation and frequency at mossy fiber¨C granule cell synapses of rat
+//Saftenku, Paola Rossi, and Egidio DÂ¡Â¯Angelo. LTP regulates burst
+//initiation and frequency at mossy fiberÂ¨C granule cell synapses of rat
 //cerebellum: experimental observations and theoretical predictions. J
-//Neurophysiol 95: 686¨C699, 2006. First published October 5, 2005;
+//Neurophysiol 95: 686Â¨C699, 2006. First published October 5, 2005;
 //doi:10.1152/jn.00696.2005
 	//postB = 1/(1+exp(-(y[0] - (-20))/13));
 
